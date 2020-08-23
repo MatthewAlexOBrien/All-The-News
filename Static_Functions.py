@@ -7,19 +7,6 @@ from sner import Ner
 from nltk.tokenize.treebank import TreebankWordDetokenizer
 
 
-x = " Membership has skyrocketed since Mitch Lowe " \
-    "took over as CEO this past June, and he slashed fees from $30 a month to $9.95. " \
-    "In just two days after the fee reduction, sign-ups shot up by 150,000. Now the company " \
-    "is cutting prices even more. Last month, Lowe reduced subscription fees by 20 percent " \
-    "to $7.95 per month. Coupled with the growing number of cinemas that accept the card currently " \
-    "91 percent of U.S. theaters subscriptions are set to keep growing. But even with subscriber" \
-    " growth on the rise, MoviePass reimburses most cinemas in full for each ticket (except for a " \
-    "few that offer them a 20 percent discount). In many high-priced markets such as New York and San Francisco, " \
-    "tickets cost much more than their $7.95 monthly fee. So, how does the company break even? " \
-    "Like an all-you-can-eat buffet or any unlimited service, when subscribers first start, " \
-    "they gorge on movies in the first three or four months. Then they slowly but surely settle into " \
-    "a pattern which is still double what they used to do, Donald Allan Trump, Matthew OBrien"
-
 
 ################ Extracting Names ####################
 
@@ -162,9 +149,8 @@ def clean_non_pronoun_stopwords(text):
 # on your computer, respectivley.
 
 # This method is also VERY slow if you dont connect to a Java virtual
-# machine. Essentially, we need to run it from the stanford ner server,
-# so before running code we should do the following in our terminal to
-# initiate a java virtual machine
+# machine. Before running code we should do the following in our terminal to
+# initiate a java virtual machine.
 
 # 1) Set directory to stanford ner folder 'cd /Users/matthewobrien/stanford-ner-2015-04-20/'
 # 2) Run the ner server 'java -classpath stanford-ner.jar edu.stanford.nlp.ie.NERServer -port 9199 -loadClassifier ./classifiers/english.all.3class.distsim.crf.ser.gz'
@@ -219,15 +205,4 @@ def tokenize(oldcolumn):
     newcolumn = tokenizer.texts_to_sequences(oldcolumn)
     return newcolumn
 
-
-# ############ Making Word Vectors -- > Word2Vec ##############
-#
-# # Since we cant directly pass pass the text of each article into
-# # a model explicitly, we need a way to represent words (and therefore
-# # entire articles) as dense vectors. This is exactly what Word2Vec does.
-# # Loosely speaking, it is also called 'word embedding' and there are some
-# # other promising techniques (glove embedding), but overall Word2Vec has
-# # consistently proven to be the most reliable/accurate way to embed words as vectors.
-# # It is capable of capturing context of a word in a document, semantic and
-# # syntactic similarity, relation with other words, etc.
 
