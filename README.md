@@ -7,4 +7,4 @@ Phase 1 - Text cleaning to prepare articles for further anlyisis. If you are int
 Phase 2 - Identify articles that are written strinctly about people who have passed away. Ultimatly, we want to only look at articles that refer to a single individual,
 since it would be otherwise impossible to attibute article sentiments to one person or another. Code for this portion will be uploaded shortly.
 
-Phase 3 - Given our small subset of articles, examine average article sentiment across racial and gender lines. Code for this phase will but uploded after phase 2 is completed/
+Phase 3 - Given our smaller subset of articles, examine average article sentiment across racial and gender lines. Code for this phase will but uploded after phase 2 is completed/
