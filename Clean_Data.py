@@ -38,10 +38,8 @@ news = news[news['title'].str.count(' ') >= 3]
 
 
 ######################################################
-############ Identify Names / Gender / Race ##########
+############### Identify Names In Article ############
 ######################################################
-
-news = news.iloc[0:10]
 
 # Create a new column combing title and text
 news['text'] = news['title'] + " " + news['article']
@@ -54,8 +52,8 @@ print('names done')
 ######################################################
 
 # Most of the heavy lifting here is done in Static_Functions,
-# where we have slightly modified versions of typical text cleaning
-# where we conduct the cleaning a way that is specifically tailored to
+# where we have slightly modified versions of typical text cleaning.
+# We conduct the cleaning a way that is specifically tailored to
 # our research question. If you are curious about how each step is conducted,
 # Static_Functions has more information.
 
