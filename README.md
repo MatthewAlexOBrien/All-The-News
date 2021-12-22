@@ -5,7 +5,7 @@ The intention for this project is to examine within-article differences in slant
 
 
 # ****Part 1: Data Pre-Processing****
-The exercise of data pre-processing is describled below. (1A) We start by identifying sentences and headlines for which the nominal subject is a named entity. (1B) Next, we predict race and gender of each named entity. (1C) Finally, we perform sentiment analysis on headlines and sentences. The exact details for each step are shown in their corresponding sections below. For your conveinience, the pre-processed dataset can be cloned directly into this notbook in Part 1B.
+The exercise of data pre-processing is describled below. (1A) We start by identifying sentences and headlines for which the nominal subject is a named entity. (1B) Next, we predict race and gender of each named entity. (1C) Finally, we perform sentiment analysis on headlines and sentences. The exact details for each step are shown in their corresponding sections below.
 
 ***1A. Identifying Named Nominal Subjects***
 
@@ -17,4 +17,9 @@ Race of all named nominal subjects is identified with two methods. First, we use
 
 ***1C. Performing Sentiment Analysis***
 
-Sentiment Analysis is well estblished in the world of NLP. We start by looking at two of the most common measures of sentiment, VADER (Valence Aware Dictionary and sEntiment Reasoner https://ojs.aaai.org/index.php/ICWSM/article/view/14550) and AFINN (AFINN lexicon https://arxiv.org/abs/1103.2903). We also include the sentiment alayzer from the STANZA pipeline (https://stanfordnlp.github.io/stanza/sentiment.html). All measures of sentiment are standardized for comparability. 
+Sentiment Analysis is well estblished in the world of NLP. We start by looking at two of the most common measures of sentiment.
+# i. VADER (Valence Aware Dictionary and sEntiment Reasoner https://ojs.aaai.org/index.php/ICWSM/article/view/14550)
+# ii. AFINN (AFINN lexicon https://arxiv.org/abs/1103.2903). 
+# iii. We also include the sentiment alayzer from the STANZA pipeline (https://stanfordnlp.github.io/stanza/sentiment.html). 
+
+All measures of sentiment are standardized for comparability. 
