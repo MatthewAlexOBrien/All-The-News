@@ -1,6 +1,6 @@
 # ****Project Backround****
 
-The intention for this project is to examine within-article differences in slant towards towards individuals with different ethnic and gender backrounds, for major US news puplications between 2000 and 2020. The dataset is a combination of the Components dataset found here: https://components.one/datasets/all-the-news-2-news-articles-dataset/ with other major news publications scrapped independently. The full list of publications includes: New York Times, Breitbart, CNN, Business Insider, the Atlantic, Fox News, Talking Points Memo, Buzzfeed News, National Review, New York Post, the Guardian, NPR, Reuters, Vox, and the Washington Post.
+The intention for this project is to examine within-article differences in slant towards towards individuals with different ethnic and gender backrounds for major US news puplications between 2000 and 2020. The dataset is a combination of the Components dataset found here: https://components.one/datasets/all-the-news-2-news-articles-dataset/ with other major news publications scrapped independently. The full list of publications includes: New York Times, Breitbart, CNN, Business Insider, the Atlantic, Fox News, Talking Points Memo, Buzzfeed News, National Review, New York Post, the Guardian, NPR, Reuters, Vox, and the Washington Post.
 
 
 
@@ -19,6 +19,7 @@ Data pre-processing is describled below. See: ***process.ipnyb*** for correspond
 
 > Race of all named nominal subjects is identified with two methods. 
 > * i. ETHNICOLR We use the ethnicolr package https://ethnicolr.readthedocs.io/ethnicolr.html to predict race based on the letter sequences in the subjects' name. The authors of this package have a corresponding paper here https://arxiv.org/pdf/1805.02109.pdf which outlines their procedure for predicting race. They use voter registration data in the US to train deep neural models that identify letter sequences that most correspond to specific ethnic origins.  The measure is somewhat noisy, with ~ 85% accuracy when both the first and last name are identified.  
+> 
 > * ii. DEEP FACE We use google images and DeepFace https://pypi.org/project/deepface/ to measure ethnicity, which has an overall accuracy of 97% for predicting race and gender. We obtain images of named subjects by effectively 'googling' them and dowloading the first 2 images. For robustness, we exclude subjects whos predicted ethnicity is inconsistent across the two methods.
 
 
