@@ -5,6 +5,9 @@ The intention for this project is to examine within-article differences in slant
 
 
 # ****Part 1: Data Pre-Processing****
+
+See: process.ipynb
+
 The exercise of data pre-processing is describled below. (1A) We start by identifying sentences and headlines for which the nominal subject is a named entity. (1B) Next, we predict race and gender of each named entity. (1C) Finally, we perform sentiment analysis on headlines and sentences. The exact details for each step are shown in their corresponding sections below.
 
 
