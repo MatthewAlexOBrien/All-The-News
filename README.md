@@ -17,14 +17,16 @@ Data pre-processing is describled below. See: ***process.ipnyb*** for correspond
 
 ***1B. Identifying Race of Nominal Subjects***
 
-> Race of all named nominal subjects is identified with two methods. First, we use the ethnicolr package https://ethnicolr.readthedocs.io/ethnicolr.html to predict race based on the letter sequences in the subjects' name. The authors of this package have a corresponding paper here https://arxiv.org/pdf/1805.02109.pdf which outlines their procedure for predicting race. Essentially, they use voter registration data in the US to train deep neural models that identify letter sequences that most correspond to specific ethnic origins.  The measure is somewhat noisy, with ~ 85% accuracy when both the first and last name are identified.  Second, we use google images and DeepFace https://pypi.org/project/deepface/ to measure ethnicity, which has an overall accuracy of 97% for predicting race and gender. We obtain images of named subjects by effectively 'googling' them and dowloading the first 2 images. For robustness, we exclude subjects whos predicted ethnicity is inconsistent across the two methods.
+> Race of all named nominal subjects is identified with two methods. 
+> * i. ETHNICOLR We use the ethnicolr package https://ethnicolr.readthedocs.io/ethnicolr.html to predict race based on the letter sequences in the subjects' name. The authors of this package have a corresponding paper here https://arxiv.org/pdf/1805.02109.pdf which outlines their procedure for predicting race. They use voter registration data in the US to train deep neural models that identify letter sequences that most correspond to specific ethnic origins.  The measure is somewhat noisy, with ~ 85% accuracy when both the first and last name are identified.  
+> * ii. DEEP FACE We use google images and DeepFace https://pypi.org/project/deepface/ to measure ethnicity, which has an overall accuracy of 97% for predicting race and gender. We obtain images of named subjects by effectively 'googling' them and dowloading the first 2 images. For robustness, we exclude subjects whos predicted ethnicity is inconsistent across the two methods.
 
 
 
 ***1C. Sentiment Analysis***
 
-> We start by looking at three well established measures of sentiment. All measures of sentiment are standardized for comparabi
-> *   VADER (Valence Aware Dictionary and sEntiment Reasoner https://ojs.aaai.org/index.php/ICWSM/article/view/14550)
-> *   AFINN (AFINN lexicon https://arxiv.org/abs/1103.2903). 
-> *   STANZA We also include the sentiment alayzer from the STANZA pipeline (https://stanfordnlp.github.io/stanza/sentiment.html)
+> We start by looking at three well established measures of sentiment. All measures of sentiment are standardized for comparabity
+> *   i. VADER (Valence Aware Dictionary and sEntiment Reasoner https://ojs.aaai.org/index.php/ICWSM/article/view/14550)
+> *   ii. AFINN (AFINN lexicon https://arxiv.org/abs/1103.2903). 
+> *   iii. STANZA We also include the sentiment alayzer from the STANZA pipeline (https://stanfordnlp.github.io/stanza/sentiment.html)
 
