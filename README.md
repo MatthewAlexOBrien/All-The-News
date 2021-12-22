@@ -23,8 +23,8 @@ Data pre-processing is describled below. See: ***process.ipnyb*** for correspond
 
 ***1C. Sentiment Analysis***
 
-> Sentiment Analysis is well estblished in the world of NLP. We start by looking at two of the most common measures of sentiment.
+> We start by looking at three well established measures of sentiment. All measures of sentiment are standardized for comparabi
 > *   VADER (Valence Aware Dictionary and sEntiment Reasoner https://ojs.aaai.org/index.php/ICWSM/article/view/14550)
 > *   AFINN (AFINN lexicon https://arxiv.org/abs/1103.2903). 
 > *   STANZA We also include the sentiment alayzer from the STANZA pipeline (https://stanfordnlp.github.io/stanza/sentiment.html)
-> All measures of sentiment are standardized for comparability. 
+
