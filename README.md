@@ -6,7 +6,7 @@ The intention for this project is to examine within-article differences in slant
 
 # ****Part 1: Data Pre-Processing****
 
-Data pre-processing is describled below. See: ***process.ipnyb*** for corresponding notebook
+Data pre-processing is describled below. See: ***process.ipnyb*** for the corresponding notebook
 
 
 ***1A. Identifying Named Nominal Subjects***
