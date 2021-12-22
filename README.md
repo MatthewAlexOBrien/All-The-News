@@ -1,6 +1,6 @@
 # ****Project Backround****
 
-The intention for this project is to examine within-article differences in slant towards towards individuals with different ethnic backrounds, for major US news puplications between 2000 and 2020. The dataset is a combination of the Components dataset found here: https://components.one/datasets/all-the-news-2-news-articles-dataset/ with other major news publications scrapped independently. The full list of publications includes: New York Times, Breitbart, CNN, Business Insider, the Atlantic, Fox News, Talking Points Memo, Buzzfeed News, National Review, New York Post, the Guardian, NPR, Reuters, Vox, and the Washington Post.
+The intention for this project is to examine within-article differences in slant towards towards individuals with different ethnic and gender backrounds, for major US news puplications between 2000 and 2020. The dataset is a combination of the Components dataset found here: https://components.one/datasets/all-the-news-2-news-articles-dataset/ with other major news publications scrapped independently. The full list of publications includes: New York Times, Breitbart, CNN, Business Insider, the Atlantic, Fox News, Talking Points Memo, Buzzfeed News, National Review, New York Post, the Guardian, NPR, Reuters, Vox, and the Washington Post.
 
 
 
@@ -9,7 +9,7 @@ The exercise of data pre-processing is describled below. (1A) We start by identi
 
 ***1A. Identifying Named Nominal Subjects***
 
-We start by examining the nominal subject of each sentence within in each article, for which we use the Stanford NLP Group's dependency parser pipeline, availble through their python NLP package 'Stanza'. https://stanfordnlp.github.io/stanza/depparse.html. Next, we use Stanza's Named Entity Regognition pipline to determine which nominal subjects are named entities (people) https://stanfordnlp.github.io/stanza/ner.html. Sentences for which the nominal sibject is not named-entity are removed from the dataset. We repeat this exercise for article headlines.
+We start by examining the nominal subject of each sentence within in each article, for which we use the Stanford NLP Group's dependency parser pipeline, availble through their python NLP package 'Stanza'. https://stanfordnlp.github.io/stanza/depparse.html. Next, we use Stanza's Named Entity Regognition pipline to determine which nominal subjects are named entities (people) https://stanfordnlp.github.io/stanza/ner.html. Sentences for which the nominal subject is not named-entity are removed from the dataset. We repeat this exercise for article headlines.
 
 ***1B. Identifying Race and Gender of Nominal Subjects***
 
