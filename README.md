@@ -26,7 +26,7 @@ Data pre-processing is describled below. See: ***process.ipnyb*** for the corres
 
 ***1C. Sentiment Analysis***
 
-> We start by looking at three well established measures of sentiment. All measures of sentiment are standardized for comparabity
+> We use three well established measures of sentiment. All measures of sentiment are standardized for comparabity.
 > *   i. VADER (Valence Aware Dictionary and sEntiment Reasoner https://ojs.aaai.org/index.php/ICWSM/article/view/14550)
 > *   ii. AFINN (AFINN lexicon https://arxiv.org/abs/1103.2903). 
 > *   iii. STANZA We also include the sentiment alayzer from the STANZA pipeline (https://stanfordnlp.github.io/stanza/sentiment.html)
