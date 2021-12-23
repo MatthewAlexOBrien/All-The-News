@@ -21,6 +21,7 @@ Data pre-processing is describled below. See: ***process.ipnyb*** for the corres
 > * i. DEEP FACE We use google images and DeepFace https://pypi.org/project/deepface/ to measure ethnicity, which has an overall accuracy of 97% for predicting race and gender. We obtain images of named subjects by 'googling' them and dowloading the first 3 images. 
 > 
 > * ii. ETHNICOLR We use the ethnicolr package https://ethnicolr.readthedocs.io/ethnicolr.html to predict race based on the letter sequences in the subjects' name. The authors of this package have a corresponding paper https://arxiv.org/pdf/1805.02109.pdf which outlines their procedure for predicting race. They use voter registration data in the US to train deep neural models that identify letter sequences that most correspond to specific ethnic origins.  The measure is somewhat noisy, with ~ 85% accuracy when both the first and last name are identified. 
+> 
 > For robustness, we exclude subjects whos predicted ethnicity is inconsistent across the two methods.
 
 
