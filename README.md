@@ -6,16 +6,19 @@ The intention for this project is to examine within-article differences in slant
 
 # ****Part 1: Data Pre-Processing****
 
-Data pre-processing is describled below. See: ***process.ipnyb*** for the corresponding notebook
+Data pre-processing is describled below.
 
 
 ***1A. Identifying Named Nominal Subjects***
 
+> See: ***subjects.ipnyb*** 
+
 > We start by extracting the 'subject' of each sentence for all articles using Stanford NLP Group's dependency parser pipeline, availble through their python NLP package 'Stanza'. https://stanfordnlp.github.io/stanza/depparse.html. Next, we use Stanza's Named Entity Regognition pipline to determine which subjects are named entities (people) https://stanfordnlp.github.io/stanza/ner.html. Sentences for which the nominal subject is not named-entity are removed from the dataset. We repeat this exercise for article headlines.
 
 
-
 ***1B. Identifying Race of Nominal Subjects***
+
+> See: ***ethnicity.ipnyb*** 
 
 > Race of all named nominal subjects is identified with two methods. 
 > * i. DEEP FACE We use google images and DeepFace https://pypi.org/project/deepface/ to measure ethnicity, which has an overall accuracy of 97% for predicting race and gender. We obtain images of named subjects by 'googling' them and dowloading the first 3 images. 
@@ -25,10 +28,9 @@ Data pre-processing is describled below. See: ***process.ipnyb*** for the corres
 > For robustness, we exclude subjects whos predicted ethnicity is inconsistent across the two methods.
 
 
-
-
-
 ***1C. Sentiment Analysis***
+
+> See: ***sentiment.ipnyb*** 
 
 > We use three well established measures of sentiment. All measures of sentiment are standardized for comparabity.
 > *   i. VADER (Valence Aware Dictionary and sEntiment Reasoner https://ojs.aaai.org/index.php/ICWSM/article/view/14550)
