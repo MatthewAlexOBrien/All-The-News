@@ -4,7 +4,7 @@ The intention for this project is to examine within-article differences in slant
 
 
 
-# ****Part 1: Data Pre-Processing****
+# ****Data Pre-Processing****
 
 Data pre-processing is describled below.
 
